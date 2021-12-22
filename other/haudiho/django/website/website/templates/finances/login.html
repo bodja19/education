@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+    hello word
+    {% if user %}
+
+        {% for a in users %}
+            <a href="#">{{a.username}}</a>
+        {% endfor %}
+    {% else %}
+        Articles not founded
+    {% endif%}
+
+{% endblock %}
