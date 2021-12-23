@@ -1,17 +1,50 @@
-{% extends 'base.html' %}
-
-{% block title %}Login{% endblock %}
-
-{% block content %}
-
-    hello word
-    {% if user %}
-
-        {% for a in users %}
-            <a href="#">{{a.username}}</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css"  href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header" >
+        <div class="container d-flex">
+            <div class="header-logo">
+                <a href="#" class="logo-link
+                "> Logos</a>
+            </div>
+            <nav class="menu">
+                <a href="#home" class="menu-link">Home</a>
+                <a href="#games" class="menu-link">Games</a>
+                <a href="#popular" class="menu-link">The most popular Games</a>
+                <a href="#about" class="menu-link">About us!</a>
+            </nav>
+        </div>
+    </header>
+    <section class="section" id="home">
+        <div class="container">
+            <h2>Home</h2>
+        </div>
+    </section>
+    <section class="section" id="games">
+        <div class="container">
+            <h2>Games</h2>
+        </div>
+    </section>
+    <section class="section" id="popular">
+        <div class="container">
+            <h2>The most popular Games</h2>
+        </div>
+    </section>
+    <section class="section" id="about">
+        <div class="container">
+            <h2>About us!</h2>
+            {% for a in all_money %}
+            <a href="{% url 'articles:detail' a.id %}">{{a.all_money}}</a>
         {% endfor %}
-    {% else %}
-        Articles not founded
-    {% endif%}
-
-{% endblock %}
+        </div>
+    </section>
+</body>
+</html>

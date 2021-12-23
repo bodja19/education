@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 90%;
+    min-height: 100%;
+    margin: 0 auto;
+    border-left: black solid 1px;
+  }
+.section{
+    height: 100vh;
+    padding-top: 60px;
+}
+.header{
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: burlywood;
+}
+#home{
+    background-color: rgb(192, 185, 185);
+}
+#games{
+    background-color: rgb(145, 141, 141);
+}
+#popular{
+    background-color: rgb(129, 126, 126);
+}
+#about{
+    background-color: rgb(97, 97, 97);
+}
+.header-logo{
+    /* height: 60px; */
+    width: 20%;
+    background-color: tomato;
+}
+.menu{
+    width: 50%;
+    /* height: 60px; */
+    background-color: rgb(252, 77, 46);
+}
+.d-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
